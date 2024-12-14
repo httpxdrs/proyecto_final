@@ -1,0 +1,182 @@
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #C8EBFE, #42BFDD);
+    margin: 0;
+    padding: 0;
+    color: #C8EBFE;
+}
+h1 {
+    color: #5c5fba;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/* Barra de navegación */
+.navbar {
+    background-color: #C8EBFE;
+    padding: 15px;
+    border-bottom: 3px solid #C8EBFE;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #C8EBFE !important;
+    font-weight: bold;
+}
+
+.navbar .btn-primary {
+    background-color: #C8EBFE;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn-primary:hover {
+    background-color: #C8EBFE;
+}
+
+/* Icono de administrador */
+.admin-icon {
+    color: #ff7eb3;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.admin-icon:hover {
+    color: #ff4d80;
+}
+
+/* Menú de administrador */
+.admin-menu {
+    background-color: #343a40;
+    color: white;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px;
+    display: none;
+}
+
+.admin-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.admin-menu a:hover {
+    background-color: #495057;
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #495057;
+}
+
+/* Lista de productos */
+.product-list {
+    display: none; /* Oculto por defecto */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card .btn-primary {
+    background-color: #ff7eb3;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn-primary:hover {
+    background-color: #ff4d80;
+}
+
+.product-card .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Barra de búsqueda */
+.barra-busqueda .form-control {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.barra-busqueda .form-control:focus {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.barra-busqueda .btn-primary {
+    border-radius: 20px;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa toda la anchura de la ventana */
+    background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.center-container .logo {
+    margin: 0 auto;
+}

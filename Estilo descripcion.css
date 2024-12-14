@@ -1,0 +1,137 @@
+/* Contenedor principal */
+.product-detail {
+    max-width: 1200px; /* Aumentar ancho máximo */
+    margin: 40px auto;
+    background: white;
+    padding: 30px; /* Aumentar el espacio interno */
+    border-radius: 15px; /* Redondear bordes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Más sombra para destacarlo */
+}
+
+/* Fila principal */
+.product-row {
+    display: flex;
+    gap: 80px; /* Aumentar separación entre imagen y detalles */
+}
+
+/* Imagen del producto */
+.product-left img {
+    max-width: 900px; /* Hacer la imagen más grande */
+    border-radius: 10px;
+}
+
+/* Detalles del producto */
+.product-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Título y botón de favoritos */
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Separar título del resto */
+}
+
+.product-header h1 {
+    font-size: 32px; /* Aumentar tamaño del título */
+    font-weight: bold;
+}
+
+.btn-favorito {
+    border: none;
+    color: gray;
+    cursor: pointer;
+
+}
+
+/* Información del producto */
+.brand {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 28px; /* Aumentar tamaño del precio */
+    font-weight: bold;
+    color: #e60023;
+    margin-bottom: 10px;
+}
+
+.wholesale-price {
+    font-size: 20px;
+    color: #555;
+}
+
+.description {
+    font-size: 18px; /* Ajustar tamaño del texto */
+    margin-bottom: 20px;
+}
+
+/* Botones */
+.product-buttons {
+    display: flex;
+    gap: 15px; /* Separar los botones */
+    margin-top: 30px; /* Más espacio arriba */
+}
+
+.product-buttons .btn {
+    flex: 1;
+    padding: 15px 25px; /* Hacer los botones más grandes */
+    font-size: 18px; /* Aumentar el tamaño de texto de los botones */
+    font-weight: bold;
+}
+
+.dropdown-favoritos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.nav-favoritos:hover + .dropdown-favoritos,
+.dropdown-favoritos:hover {
+    display: block;
+}
+
+.favorito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.favorito-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.favorito-info {
+    flex: 1;
+}
+
+.favorito-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.favorito-precio {
+    font-size: 12px;
+    color: #e60023;
+    margin: 0;
+}
+
+
+
+.btn-favorito.favorito-activo {
+    color: red;
+}

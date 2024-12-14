@@ -1,0 +1,171 @@
+Estilo VerUsuarios.css
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #c8ebfe, #42BFDD);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Barra de navegación */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.barra-busqueda .form-control {
+    width: 1085px;
+}
+
+.admin-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* Menú desplegable */
+.admin-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #42BFDD;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.admin-menu a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.admin-menu a:hover {
+    background-color: #c8ebfe;
+}
+
+/* Contenido principal */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #5c5fba;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    color: #5c5fba;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(to right, #d093e7, #e0c3fc);
+    color: #c8ebfe;
+    font-weight: bold;
+    border-bottom: 2px solid #c8ebfe;
+}
+
+td {
+    border-bottom: 1px solid #c8ebfe;
+}
+
+tr:hover {
+    background-color: #fdf3ff;
+    transition: background-color 0.3s ease;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botón regresar */
+.btn-secondary {
+    background-color: #c8ebfe;
+    border-color: #c8ebfe;
+}
+
+.btn-secondary:hover {
+    background-color: #c8ebfe;
+    border-color: #c8ebfe;
+}
+
+/* Párrafos */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+strong {
+    color: #e87ca6;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .barra-busqueda .form-control {
+        width: 100%;
+    }
+
+    .admin-menu {
+        top: 50px;
+        right: 10px;
+    }
+
+    table {
+        width: 100%; /* Ocupa todo el espacio disponible en dispositivos pequeños */
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%; /* Ocupa todo el espacio disponible en dispositivos pequeños */
+    }
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

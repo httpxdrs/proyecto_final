@@ -1,0 +1,111 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #C8EBFE, #42BFDD);
+}
+
+/* Encabezado */
+h1{
+    text-align: center;
+    color: #5c5fba;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    color: #555;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    max-width: 300px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #c490d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px; /* Tamaño más grande */
+    font-weight: bold; /* Texto en negritas */
+}
+
+
+form button:hover {
+    background: #ff4d80;
+}
+
+/* Tabla de reporte */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: linear-gradient(to right, #d093e7, #e0c3fc);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tr:hover {
+    background: #f1f1f1;
+}
+
+
+
+
+
+
+
+
+/* Barra de navegación */
+.navbar {
+    background: linear-gradient(to right, #5c5fba, #42BFDD);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+}

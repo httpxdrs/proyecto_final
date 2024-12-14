@@ -1,0 +1,333 @@
+/* Contenedor de la barra superior */
+.barra-superior {
+  background-color: #ABDAFC !important;
+  padding: 10px 20px; /* Espaciado general */
+  display: flex;
+  align-items: center; /* Centrar verticalmente los elementos */
+  justify-content: space-between; /* Separar logo/texto y barra de búsqueda */
+  height: 80px; /* Fija la altura de la barra */
+  overflow: hidden; /* Asegura que el contenido no la desborde */
+}
+
+/* Logo */
+.barra-superior .logo {
+  width: 90px; /* Aumenta el tamaño del logo */
+  height: auto; /* Mantén las proporciones del logo */
+  margin-right: 10px; /* Espacio entre logo y texto */
+  flex-shrink: 0; /* Evita que el logo reduzca su tamaño */
+}
+
+/* Texto "HuasTecShop" */
+.barra-superior .text-bold {
+  font-size: 1.8rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  color: black; /* Color del texto */
+  margin-left: 10px; /* Espacio entre el borde izquierdo y el logo */
+  white-space: nowrap; /* Evitar que el texto se corte */
+}
+
+/* Barra de búsqueda */
+.barra-busqueda {
+  position: absolute; /* Evita que se mueva según los otros elementos */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado */
+  max-width: 600px; /* Tamaño máximo */
+  width: 100%; /* Asegura que sea responsiva */
+}
+
+.barra-busqueda form {
+  display: flex;
+  width: 100%; /* Asegura que la barra de búsqueda ocupe todo su espacio */
+}
+
+#busqueda {
+  flex-grow: 1; /* El campo de búsqueda se adapta al espacio disponible */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+#buscar-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#buscar-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Barra inferior */
+.barra-inferior {
+  background-color: #ABDAFC;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.barra-inferior .menu li {
+  margin-right: 15px;
+}
+
+.barra-inferior .menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.barra-inferior .menu a:hover {
+  text-decoration: underline;
+}
+#favoritos-lista {
+  max-height: 300px; /* Ajusta el tamaño según sea necesario */
+  overflow-y: auto; /* Activa el scroll vertical */
+}
+
+
+#sugerencias {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#sugerencias a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+#sugerencias a:hover {
+  background-color: #f8f8f8;
+}
+
+/* Espaciado entre tarjetas */
+.row {
+  gap: 15px;
+  justify-content: center; /* Centrar las tarjetas */
+}
+/* Contenedor principal */
+.productos-relacionados {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.productos-relacionados h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Slider de productos */
+.product-slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.product-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-slider::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.product-slider::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-link:hover .product-item {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Producto individual */
+.product-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto */
+.product-item img {
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Precio del producto */
+.product-price {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price-original {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+/* Porcentaje de descuento */
+.product-discount {
+  font-size: 0.9rem;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Información adicional */
+.product-extra {
+  font-size: 0.9rem;
+  color: #2ecc71;
+}
+
+.categorias-tendencia {
+  padding: 50px 0;
+}
+
+.category-card {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(to bottom right, #007bff, #6c757d); /* Fondo azul con gris */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo siempre visible */
+.category-card .content {
+  z-index: 1;
+}
+
+.category-card h3,
+.category-card p {
+  margin: 0;
+  color: white; /* Texto siempre blanco */
+}
+
+/* Espaciado y diseño */
+.container h2 {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+/*Marcas*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.official-stores {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.official-stores h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.brand-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+.brand {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.brand p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
